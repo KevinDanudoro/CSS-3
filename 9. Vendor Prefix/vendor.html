@@ -1,0 +1,47 @@
+<!-- Vendor prefix adalah teknik di CSS3 agar sintaks CSS3 yang dibuat dapat kompatibel di semua browser -->
+
+<!-- 
+
+    Vendor Prefix pada masing2 browser:
+        -webkit-    => chrome, safari, opera versi terbaru
+        -moz-       => mozilla
+        -ms-        => internet explorer
+        -o-         => opera versi terdahulu
+
+
+    Untuk mengetahui sintaks apa saja yang harus di prefix, periksa webiste:
+    http://shouldiprefix.com/
+    https://caniuse.com/
+
+    Website dibawah ini dapat menambahkan prefix langsung ke sintaks yang kita tulis bila dibutuhkan
+    http://pleeease.iamvdo.me/play/
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vendor Prefix CSS 3</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        img{
+            filter: grayscale(100%);
+            /* Untuk saat ini chrome sudah mendukung fitur filter pada CSS3, namun dulunya harus ditulis: */
+            
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    </style>
+
+</head>
+<body>
+
+    <img src="../1. Border Radius/img/BrownLine.jpg" alt="BrownLine">
+    
+</body>
+</html>

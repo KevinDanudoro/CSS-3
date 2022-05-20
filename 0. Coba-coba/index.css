@@ -1,0 +1,15 @@
+.kotak{
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+    background-color: salmon;
+    transition: width .5s, height .5s .5s, margin-top .5s .5s, background-color 1s;
+}
+.size {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+}
+.color{
+    background-color: violet;
+}

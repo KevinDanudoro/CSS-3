@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Opacity CSS3</title>
+    <style>
+
+        body{
+            background-image: url(img/folk-pattern-black.png);
+
+        }
+
+        .satu{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            opacity: 50%;
+            position: relative;
+        }
+
+        .satu .dua{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(144, 238, 144);
+            opacity: 50%;   /* 50% dari parentnya yang mana berarti 50% dari div satu */
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="satu">
+        <div class="dua"></div>
+    </div>
+    <!-- Untuk membuat div dua tidak tranparan sedangkan div satu transparan, dibutuhkan cara lain yaitu RGBa -->
+    
+</body>
+</html>

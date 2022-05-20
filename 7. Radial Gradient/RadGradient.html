@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Radial Gradient CSS3</title>
+    <style>
+
+        div{
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+
+            /* background-image: radial-gradient(warna 1, warna 2, ...)  standar*/ 
+            /* background-image: radial-gradient( sudut || arah, warna 1, warna 2, ...)  ubah arah*/
+            background-image: radial-gradient(red, green);
+            background-image: radial-gradient(45deg, red, green);
+            background-image: radial-gradient(to right top, red, green);
+
+            /* Mengatur komposisi warna pada gradasi */
+            background-image: radial-gradient(to right, red 20%, green 40%);
+
+            /* sintaks lengkap: */
+            /*
+            background-image: radial-gradient(
+                tipe jangkauan at posisi-y posisi-x,
+                warna 1,
+                warna 2,
+                ...
+            )
+
+            tipe: ellips/circle
+            jangkauan:
+                1. Closest-corner   = sudut terdekat
+                2. closest-side     = sisi terdekat
+                3. farthest-corner  = sudut terjauh 
+                4. farthest-side    = sisi terjauh
+                (mengatur besar gradasi)
+
+            posisi-y dan posisi-x: mengatur pusat gradient
+
+            */
+
+            background-image: radial-gradient(circle closest-corner, red, blue);
+            background-image: radial-gradient(circle farthest-side at top left, red, blue);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Radial gradient: Memberi gradasi warna pada background image dengan bentuk melingkar -->
+    <div></div>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Font Face CSS3</title>
+
+    <!-- Harus terhubung ke internet untuk menggunakan font Yomogi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet"> 
+
+    <style>
+
+        /* font face digunakan untuk import file font dari lokal storage */
+        @font-face{
+            font-family: "Alex Brush";
+            src: url('font/AlexBrush-Regular.ttf') format('truetype');  /* tipe file .ttf */
+            /* Tipe File font yang paling cepat dalam penggunaan website adalah file .woff */
+        }
+
+        /* 
+        Untuk mengakali perbedaan file maka digunakanlah web font generator. 
+        https://www.fontsquirrel.com/tools/webfont-generator
+        */
+
+
+        /* Font alex brush tipe file .woff menggunakan web font generator */
+        @font-face {
+            font-family: 'alex_brushregular';
+            src:url('font/alexbrush-regular-webfont.woff2') format('woff2'),
+                url('font/alexbrush-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /* Penulisan font face didapat dari file zip hasil download dari web font generator */
+
+/* ============================================================================================================ */
+
+
+        h1{
+            font-size: 70px;
+            /* font-family: 'Yomogi', cursive; */
+            /* font-family: "Alex brush", arial; */
+            font-family: 'alex_brushregular', arial;
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Hello World</h1>
+
+    
+</body>
+</html>

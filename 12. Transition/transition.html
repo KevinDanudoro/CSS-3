@@ -1,0 +1,177 @@
+<!-- 
+
+Transition: Memungkinkan user dapat mengubah nilai dari properti HTML secara halus
+
+Sintaks:
+    trasition: [properti] <durasi => wajib> [fungsi] [delay]
+
+*Selalu letakkan transisi di keadaan awal sebuah elemen/objek yang akan kita transform.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transiton CSS3</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Transisi durasi */
+        .kotak1{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: 0.3s;
+        }
+
+        .kotak1:hover{
+            transform: rotate(180deg);
+            margin-left: 600px;
+        }
+
+        /* ======================== */
+
+        /* Menggunakan container */
+        .container .kotak{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: 1s;
+        }
+
+        .container:hover .kotak{    /* saat class container di hover, lakukan ... pada class kotak di dalammnya */
+            transform: rotate(180deg);
+            margin-left: 600px;
+        }
+
+        .container{
+            border: 3px solid black;
+            width: 700px;
+        }
+
+        /* ================== */
+
+        /* Transisi Properti */
+        .container1 .kotak{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            /* transition: .3s; == transition: all .3s; */
+
+            transition: margin-left 1s;   /* Menggunakan properti */
+            /* Lakukan transisi pada margin-left saja, lainnya jalankan tanpa transisi */
+        }
+
+        .container1{
+            border: 3px solid black;
+            width: 700px;
+        }
+
+        .container1:hover .kotak{
+            transform: rotate(125deg);
+            margin-left: 600px;
+            background-color: royalblue;
+        }
+
+        /* ======================= */
+
+        /* Transisi fungsi */
+        .container2 {
+            border: 3px solid black;
+            width: 720px;
+        }
+
+        .container2 .kotak{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            margin: 20px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        .container2:hover .kotak{
+            transform: rotate(180deg);
+            margin-left: 600px;
+        }
+        
+        .kotak1{ transition: 1s ease; }
+        .kotak2{ transition: 1s ease-in; }
+        .kotak3{ transition: 1s ease-in-out; }
+        .kotak4{ transition: 1s ease-out; }
+        .kotak5{ transition: 1s linear; }
+        .kotak6{ transition: 1s cubic-bezier(0.33,-0.52, 0.54, 1.41); }
+        /* untuk medapatkan nilai cubic-bezier yang tepat, gunakan inspek elemen pada browser */
+
+        /* ========================= */
+
+        /* Transisi Delay */
+        .container3 .kotak{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: margin-left 2s, transform 2s 2s, background-color 1s 3s ;
+            /* 
+            transisi-kan margin-left selama 2s, 
+            lalu transisi-kan transform selama 2s setelah menunggu 2s (setelah transisi margin-left selesai), 
+            terakhir transisi-kan background-color selama 1s setelah menunggu 3s (saat transisi transform sudah berjalan 1s).
+            */
+        }
+
+        .container3:hover .kotak{    /* saat class container di hover, lakukan ... pada class kotak di dalammnya */
+            transform: rotate(360deg);
+            margin-left: 600px;
+            background-color: royalblue;
+        }
+
+        .container3{
+            border: 3px solid black;
+            width: 700px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Tanpa Container</h1>
+    <div class="kotak1"></div>
+    <!-- Agar tidak terjadi error, masukkan div.kotak ke div.container -->
+
+    <br><br>
+
+    <h1>Dengan Container</h1>
+    <div class="container">
+        <div class="kotak"></div>
+    </div>
+
+    <br><br>
+
+    <h1>Properti pada trasition</h1>
+    <div class="container1">
+        <div class="kotak"></div>
+    </div>
+
+    <br><br>
+
+    <h1>Fungsi pada transition</h1>
+    <div class="container2">
+        <div class="kotak kotak1">ease</div>
+        <div class="kotak kotak2">ease-in</div>
+        <div class="kotak kotak3">ease-in-out</div>
+        <div class="kotak kotak4">ease-out</div>
+        <div class="kotak kotak5">linear</div>
+        <div class="kotak kotak6">Cubic-Bezier</div>
+    </div>
+
+    <br><br>
+
+    <h1>Delay pada transition</h1>
+    <div class="container3">
+        <div class="kotak"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!--
+Filter:
+    Properti di CSS3 yang digunakan untuk memberikan efek visual pada gambar, background, dan border
+
+Macam2 Filter:
+    blur(px)
+    brightness(angka|| %)
+    contast(angka || %)
+    saturate(angka || %)
+    grayscale(angka || %)
+    sepia(angka || %)
+    hue-rotate(deg)
+    invert(angka || %)
+    opacitiy(angka || %)
+    drop-shadow(sama seperti box-shadow)
+
+Seluruh filter di atas dapat ditumpuk 
+
+Untuk melihat pengaturan filter dan sintaks CSS3 secara langsung, kunjungi
+http://www.cssfiltergenerator.com/
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Filter CSS3</title>
+
+    <style>
+        body{
+            text-align: center;
+        }
+
+        img{
+            filter: blur(5px);
+            /* filter: brightness(1.5); */ /* default 100% */
+            /* filter: contrast(1.5); */ /* default 100% */
+            /* filter: saturate(150%); */ /* default 100% */
+            /* filter: grayscale(80%); */ /* default 0 */
+            /* filter: sepia(100%); */ /* default 0 */
+
+            /* Memutar roda warna dan mengubah warna pada gambar */
+            /* filter: hue-rotate(100deg); */ /* default 0 */
+            
+            /* Memutarbalikkan terang gelap pada gambar */
+            /* filter: invert(100%); */ /* default 0 */
+            /* filter: opacity(60%); */ /* default 100% */
+
+            /* filter ini memiliki kelebihan dimana dapat memberi bayangan pada teks dan juga gambar/box */
+            /* drop-shadow juga dapat memberi bayangan pada objek transparan pada gambar */
+            /* filter: drop-shadow(5px 5px 5px black); */
+        }
+    </style>
+
+</head>
+<body>
+
+    <img src="../1. Border Radius/img/BrownLine.jpg" alt="BrownLine">
+    
+</body>
+</html>

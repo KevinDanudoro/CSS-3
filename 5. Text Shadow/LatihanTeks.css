@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div{
+    width: 700px;
+    height: 200px;
+    line-height: 200px;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 40px;
+}
+
+.satu{
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 30px yellow,
+        0 0 40px yellow;
+}
+
+.dua {
+    background-color: rgb(112, 112, 112);
+    color: rgb(29, 29, 29);
+    text-shadow: 0 1px 0 white;
+}
+
+.tiga{
+    background-color: rgb(196, 227, 238);
+    color: rgba(81, 95, 172, 0.822);
+    text-shadow: 0 0 7px white,
+        0 0 0px black,  
+        0 0 7px white;
+}
+
+.empat{
+    background-color: white;
+    color: rgb(48, 48, 48);
+    text-shadow: 5px 3px 0 rgb(255, 255, 255),
+        8px 6px 0 rgb(189, 189, 189)
+}
+
+.lima{
+    background-color: white;
+    color: rgb(48, 48, 48);
+    text-shadow: 0 1px #808d93,
+    -1px 0 #cdd2d5,
+    -1px 2px #808d93,
+    -2px 1px #cdd2d5,
+    -2px 3px #808d93,
+    -3px 2px #cdd2d5,
+    -3px 4px #808d93,
+    -4px 3px #cdd2d5,
+    -4px 5px #808d93;
+}
+
+.enam{
+    background-color: rgb(61, 61, 255);
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-shadow: 
+    -5px 5px 0 rgb(61, 61, 255),
+    -15px 10px 0 rgba(0, 0, 0, 0.767);
+}

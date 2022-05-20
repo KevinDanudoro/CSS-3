@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Opacity CSS3</title>
+    <style>
+
+        body{
+            background-image: url(img/folk-pattern-black.png);
+
+        }
+
+        .satu{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);   /* Tidak menambah transparansi/nilai alpha */
+            background-color: hsla(360, 100%, 100%, 1);     /* HSLa mirip dengan RGBa */
+            position: relative;
+        }
+
+        .satu .dua{
+            width: 100px;
+            height: 100px;
+            background-color: rgba(144, 238, 144, 0.5);   /* rgba(red green blue alpha) */
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="satu">
+        <div class="dua"></div>
+    </div>
+    <!-- Untuk membuat div dua tidak tranparan sedangkan div satu transparan, dibutuhkan cara lain yaitu RGBa -->
+    <!-- Namun terdapat kelemahan dimana transparansi hanya bisa dilakukan pada warna yang tersedia pada RGB -->
+    <!-- Gambar dan elemen lainnya tidak memungkinkan untuk transparan menggunakan sintaks RGBa -->
+
+</body>
+</html>
